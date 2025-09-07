@@ -90,22 +90,28 @@ The frontend will automatically display all prepopulated data upon startup.
 
 ### Landing Page
 Clean, intuitive interface displaying all payments
+
 <img width="689" height="686" alt="Landing_Page" src="https://github.com/user-attachments/assets/07e37356-ee0f-4994-b833-756ce7c16889" />
 
 ### Payment Confirmation
 Successful payment confirmation for John
+
 <img width="687" height="664" alt="JOHN_Confirmed" src="https://github.com/user-attachments/assets/5ce90dd7-85c1-4b58-b660-c4776d9be534" />
 
 ### Input Validation
 **Missing Amount Field:**
+
 <img width="683" height="679" alt="MARY_No_Amount" src="https://github.com/user-attachments/assets/876e5e11-a73a-4f04-aa0d-06462eac51db" />
 
 **Invalid Amount Format:**
+
 <img width="685" height="683" alt="MARY_Wrong Amnt" src="https://github.com/user-attachments/assets/57dac568-5359-4f0b-b15b-ec0832c50f27" />
 
 ### Successful Operations
 **Adding New Payment:**
+
 <img width="686" height="790" alt="MARY_Added" src="https://github.com/user-attachments/assets/a6408e24-aa26-4f3b-abff-027b6bb35446" />
 
 **Payment Status Update:**
+
 <img width="683" height="744" alt="MARY_Confirmed" src="https://github.com/user-attachments/assets/731411b2-2535-4a7e-8404-38e215ca3219" />
