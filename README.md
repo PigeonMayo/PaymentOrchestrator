@@ -41,6 +41,7 @@ xunit.runner.visualstudio v2.4.5
 ```bash
 cd paymentfe
 npm install
+npm start
 ```
 
 > **Important**: Ensure the backend is running before starting the frontend!
