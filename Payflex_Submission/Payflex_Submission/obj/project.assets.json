@@ -5611,11 +5611,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studio\\Microsoft VS\\Payflex_Submission\\Payflex_Submission\\Payflex_Submission.csproj",
+      "projectUniqueName": "D:\\programmingexercises\\PaymentOrchestrator\\Payflex_Submission\\Payflex_Submission\\Payflex_Submission.csproj",
       "projectName": "Payflex_Submission",
-      "projectPath": "D:\\Visual Studio\\Microsoft VS\\Payflex_Submission\\Payflex_Submission\\Payflex_Submission.csproj",
+      "projectPath": "D:\\programmingexercises\\PaymentOrchestrator\\Payflex_Submission\\Payflex_Submission\\Payflex_Submission.csproj",
       "packagesPath": "C:\\Users\\jacod\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studio\\Microsoft VS\\Payflex_Submission\\Payflex_Submission\\obj\\",
+      "outputPath": "D:\\programmingexercises\\PaymentOrchestrator\\Payflex_Submission\\Payflex_Submission\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
