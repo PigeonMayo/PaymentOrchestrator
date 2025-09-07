@@ -33,9 +33,12 @@ xunit.runner.visualstudio v2.4.5
 2. Navigate to the backend directory
 3. Run the application - startup should land you on the **Swagger page**
 
-> 💡 **Note**: The backend includes prepopulated data for testing. This can be commented out in `program.cs` if not needed.
+> **Note**: The backend includes prepopulated data for testing. This can be commented out in `program.cs` if not needed.
+> **Note**: please take note of where your local host is pointing to.
 
 ### Frontend Setup (React)
+
+> **Important**: please make sure the links to the swagger are correct in api.js before you run npm start they should point to your swagger page
 
 #### Prerequisites & Installation
 ```bash
