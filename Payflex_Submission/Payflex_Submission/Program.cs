@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Payflex_Submission.Data;
 using Payflex_Submission.Models;
+using Payflex_Submission.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApiContext>
     (opt => opt.UseInMemoryDatabase("Paymentsdb"));
 
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

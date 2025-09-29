@@ -1,87 +1,55 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Payflex_Submission.Models;
-using Payflex_Submission.Data;
+using Payflex_Submission.Services;
 
 namespace Payflex_Submission.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[Controller]/[action]")]
     [ApiController]
     public class PaymentsController : ControllerBase
     {
-        public readonly ApiContext _context;
+        private readonly IPaymentService _paymentService;
 
-        public PaymentsController(ApiContext context) { 
-            _context = context;
+        public PaymentsController(IPaymentService paymentService)
+        {
+            _paymentService = paymentService;
         }
 
-        //Create
         [HttpPost]
         public JsonResult Create(Payment payment)
         {
-        
-            _context.Payments.Add(payment);
-            _context.SaveChanges();
-
-            return new JsonResult(Ok(payment));
-            
+            var result = _paymentService.CreatePayment(payment);
+            return new JsonResult(Ok(result));
         }
-        //Edit
+
         [HttpPost]
         public JsonResult Edit(Payment payment)
         {
+            var result = _paymentService.EditPayment(payment);
 
-            var paymentInDb = _context.Payments.Find(payment.Id);
-
-            //if doesnt exist throw error
-            if (paymentInDb == null)
-                return new JsonResult(ValidationProblem());
-
-            paymentInDb.CustomerId = payment.CustomerId;
-            paymentInDb.Amount = payment.Amount;
-            paymentInDb.Status = payment.Status;
-            _context.SaveChanges();
-            return new JsonResult(Ok(paymentInDb));
-
-
-        }
-
-        //Get single
-        [HttpGet]
-        public JsonResult Get(Guid id)
-        {
-            var result = _context.Payments.Find(id);
-            if (result == null) 
-                return new JsonResult(NotFound());
-
-            return new JsonResult(Ok(result));
-        }
-
-
-        //Get all
-        [HttpGet]
-        public JsonResult GetAll()
-        {
-            var result = _context.Payments.ToList();
-
-            return new JsonResult(Ok(result));
-        }
-
-        //Delete
-        [HttpDelete]
-        public JsonResult Delete(Guid id) 
-        {
-
-            var result = _context.Payments.Find(id);
             if (result == null)
                 return new JsonResult(NotFound());
 
-            _context.Payments.Remove(result);
-            _context.SaveChanges();
-
-            return new JsonResult(NoContent());
+            return new JsonResult(Ok(result));
         }
 
+        [HttpGet]
+        public JsonResult GetAll()
+        {
+            var result = _paymentService.GetAllPayments();
+            return new JsonResult(Ok(result));
+        }
 
+        [HttpPost]
+        public JsonResult SimulateConfirmation(Guid id)
+        {
+            var result = _paymentService.SimulateConfirmation(id);
+
+            if (result == null)
+                return new JsonResult(NotFound());
+
+            return new JsonResult(Ok(new { message = "Payment confirmed", payment = result }));
+        }
     }
 }

@@ -67,28 +67,6 @@
         }
       }
     },
-    "/api/Payments/Get": {
-      "get": {
-        "tags": [
-          "Payments"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/Payments/GetAll": {
       "get": {
         "tags": [
@@ -101,8 +79,8 @@
         }
       }
     },
-    "/api/Payments/Delete": {
-      "delete": {
+    "/api/Payments/SimulateConfirmation": {
+      "post": {
         "tags": [
           "Payments"
         ],

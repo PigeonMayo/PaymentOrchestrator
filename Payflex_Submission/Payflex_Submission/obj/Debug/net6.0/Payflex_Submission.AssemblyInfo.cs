@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Payflex_Submission")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+412d2423126f3eee1ff35f1f8462b368ab2401a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c10cd58d2400d0be1b786631c7f010075461317")]
 [assembly: System.Reflection.AssemblyProductAttribute("Payflex_Submission")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Payflex_Submission")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

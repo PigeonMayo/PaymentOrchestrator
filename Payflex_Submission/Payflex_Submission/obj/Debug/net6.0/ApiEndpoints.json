@@ -17,22 +17,6 @@
   },
   {
     "ContainingType": "Payflex_Submission.Controllers.PaymentsController",
-    "Method": "Delete",
-    "RelativePath": "api/Payments/Delete",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Payflex_Submission.Controllers.PaymentsController",
     "Method": "Edit",
     "RelativePath": "api/Payments/Edit",
     "HttpMethod": "POST",
@@ -49,9 +33,19 @@
   },
   {
     "ContainingType": "Payflex_Submission.Controllers.PaymentsController",
-    "Method": "Get",
-    "RelativePath": "api/Payments/Get",
+    "Method": "GetAll",
+    "RelativePath": "api/Payments/GetAll",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Payflex_Submission.Controllers.PaymentsController",
+    "Method": "SimulateConfirmation",
+    "RelativePath": "api/Payments/SimulateConfirmation",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -61,16 +55,6 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Payflex_Submission.Controllers.PaymentsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Payments/GetAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]
