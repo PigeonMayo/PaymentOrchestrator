@@ -63,13 +63,14 @@ The frontend will automatically display all prepopulated data upon startup.
 
 ### Backend Architecture
 ```
-├── Controllers/     
+├── Controllers/
+├── Services/     
 ├── Models/         
 └── Data/           
 ```
 
 **Key Design Decisions:**
-- **Direct Controller → DbContext** calls for maximum performance
+- **Controller-> Service** calls the required service from the Sevices to seperate out controller function from method functions.
 - **Smart defaults** in models to reduce user errors and app communication breakdowns
 - **Clean separation of concerns** without over-engineering
 
@@ -85,10 +86,9 @@ The frontend will automatically display all prepopulated data upon startup.
 
 ### Endpoints
 - `POST /api/payments/create` - Create new payment
-- `GET /api/payments/get/{id}` - Get payment by ID  
 - `GET /api/payments/getall` - Get all payments
 - `POST /api/payments/edit` - Update existing payment
-- `DELETE /api/payments/delete/{id}` - Delete payment
+- `POST /api/payments/SimulateConfirmation` - Simulate a confirmation message
 
 ## User Interface Showcase
 
